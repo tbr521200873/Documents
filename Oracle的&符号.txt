@@ -1,0 +1,10 @@
+SQL> 
+SQL>--we now set define to OFF,then insert data. 
+SQL> set define off
+SQL> insert into t values('aaa&bbb'); 
+ 
+1 row created.
+ 
+SQL> select * from t;
+ 
+set define off后就能插入&
