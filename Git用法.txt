@@ -1,0 +1,24 @@
+一 git 下载代码
+1 进入文件夹，右键点击Git Bush
+2 git clone https://github.com/greatfire/wiki.git
+
+3 下载完毕
+二 git提交
+1 git status查看当前的文件状态，已经有变化文件是需要上传到远端仓库的。
+2 git add * (或者文件名)
+使用git add命令添加需要上传的文件到缓存中，而不是上传过去，先要部署到缓存趋于，可以用*代表所有文件或者指定文件。
+3 git commit -m "备注信息"
+然后进行备注信息，提交这批文件的备注，这样可以查到修改节点。
+4 git push origin master 
+进行推送文件到仓库，因为我们没有使用公钥绑定，所以每次提交时候需要输入CODING的用户名和密码，这样也好，确保安全。
+
+everything up-to-date     ----------------   git commit -m "edit"
+
+二 Git覆盖本地代码
+1. 第一种方法
+git fetch --all 
+git reset --hard origin/master
+git fetch下载远程最新的， 然后，git reset master分支重置
+2.  第二种方法
+git reset --hard HEAD 
+git pull
